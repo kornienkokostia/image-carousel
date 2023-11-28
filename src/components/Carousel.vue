@@ -100,12 +100,12 @@ const onBtnClick = (isLeftDirection: boolean) => {
   turnOffBtns.value = true;
   const carousel = carouselRef.value;
   const images = imageRef.value;
-  carousel!.style.transform = `translateX(${isLeftDirection ? '-' : ''}${
+  carousel!.style.transform = `translateX(${isLeftDirection ? '' : '-'}${
     images![0].clientWidth + 20
   }px)`;
   setTimeout(() => {
-    const el = isLeftDirection ? props.data.shift() : props.data.pop();
-    isLeftDirection ? props.data.push(el!) : props.data.unshift(el!);
+    const el = isLeftDirection ? props.data.pop() : props.data.shift();
+    isLeftDirection ? props.data.unshift(el!) : props.data.push(el!);
     carousel!.style.transition = 'none';
     carousel!.style.transform = `translateX(0)`;
     turnOffBtns.value = false;

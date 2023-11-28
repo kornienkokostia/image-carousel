@@ -56,7 +56,7 @@ watch(
       height: fit-content;
       max-height: calc(100vh - 462px);
       border-radius: 12px;
-      width: calc(100% - 80px);
+      width: calc(100% - 60px);
       min-height: 20px;
       padding: 20px 0px 20px 20px;
       margin: 20px;
